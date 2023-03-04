@@ -8,8 +8,12 @@ set(LIBRARY_OUTPUT_PATH    ${CMAKE_BINARY_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBMUDUO_PROJECT_DIR   ${PROJECT_SOURCE_DIR})
 
-add_subdirectory(src)
+include(etc/clang_format.cmake)
+include(etc/clang_tidy.cmake)
+include(etc/cppcheck.cmake)
 
+add_subdirectory(src)
+add_subdirectory(demo)
 install(
     DIRECTORY "include/"
     DESTINATION "include"

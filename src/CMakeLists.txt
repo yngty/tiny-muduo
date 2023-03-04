@@ -6,6 +6,7 @@ file(GLOB HEAD_FILES
 aux_source_directory(${LIBMUDUO_PROJECT_DIR}/src SRC_FILES)
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES} ${HEAD_FILES})
+add_library(DUMUO::library ALIAS ${PROJECT_NAME})
 
 # set output directory
 set_target_properties(${PROJECT_NAME}

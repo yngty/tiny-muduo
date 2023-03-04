@@ -6,10 +6,11 @@
 #define TINY_MUDUO_INCLUDE_NONCOPYABLE_H
 class Noncopyable {
 public:
-    Noncopyable(const Noncopyable&) = delete;
-    Noncopyable& operator=(const Noncopyable&) = delete;
+  Noncopyable(const Noncopyable &) = delete;
+  Noncopyable &operator=(const Noncopyable &) = delete;
+
 protected:
-    Noncopyable() = default;
-    ~Noncopyable() = default;
+  Noncopyable() = default;
+  ~Noncopyable() = default;
 };
-#endif //TINY_MUDUO_INCLUDE_NONCOPYABLE_H
+#endif // TINY_MUDUO_INCLUDE_NONCOPYABLE_H
